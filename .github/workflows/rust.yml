@@ -25,13 +25,16 @@ jobs:
       run: cargo install cargo-make
 
     - name: Build Firmware
-
       run: cargo make uf2 --release
+
+    - name: Debug Path (Optional)
+      run: find target -name "*.uf2"
 
     - name: Archive Firmware
       uses: actions/upload-artifact@v4
       with:
         name: Kneackebrot-Firmware
-    
-        path: target/thumbv7em-none-eabihf/release/*.uf2
+ 
+        path: target/**/*.uf2
+        if-no-files-found: error
         retention-days: 5
