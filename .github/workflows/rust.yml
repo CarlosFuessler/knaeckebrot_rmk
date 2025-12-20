@@ -27,14 +27,15 @@ jobs:
     - name: Build Firmware
       run: cargo make uf2 --release
 
-    - name: Debug Path (Optional)
-      run: find target -name "*.uf2"
+    - name: List files to find UF2
+
+      run: find . -name "*.uf2"
 
     - name: Archive Firmware
       uses: actions/upload-artifact@v4
       with:
         name: Kneackebrot-Firmware
- 
-        path: target/**/*.uf2
+
+        path: "**/*.uf2"
         if-no-files-found: error
         retention-days: 5
