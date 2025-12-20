@@ -1,4 +1,4 @@
-name: Rust
+name: Kneackebrot Build
 
 on:
   push:
@@ -11,11 +11,27 @@ env:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
-    - name: Build
+
+    - name: Install Rust Toolchain
+      uses: dtolnay/rust-toolchain@stable
+      with:
+        targets: thumbv7em-none-eabihf
+
+    - name: Install cargo-make
+      run: cargo install cargo-make
+
+    - name: Build Firmware
+
       run: cargo make uf2 --release
-   
+
+    - name: Archive Firmware
+      uses: actions/upload-artifact@v4
+      with:
+        name: Kneackebrot-Firmware
+    
+        path: target/thumbv7em-none-eabihf/release/*.uf2
+        retention-days: 5
