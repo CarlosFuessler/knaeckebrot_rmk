@@ -1,6 +1,6 @@
-# ⌨️ Kneackebrot 🚀
+# ⌨️ Kneackebrot 
 
-> **A crispy, wireless split keyboard experience powered by RMK.**
+ **A simple, wireless split keyboard experience powered by RMK.**
 
 The **Kneackebrot** is a high-performance, split mechanical keyboard built for speed, comfort, and ultimate wireless freedom. Running on the cutting-edge **RMK** (Rust Management for Keyboards) engine, it combines the stability of Rust with the flexibility of real-time remapping.
 
@@ -10,12 +10,12 @@ The **Kneackebrot** is a high-performance, split mechanical keyboard built for s
 
 * **󰌌 Vial-Native:** No more recompiling. Remap keys, macros, and layers in real-time using the [Vial Web App](https://get.vial.today/).
 * **󰀂 Wireless Split:** Powered by nRF52840, providing a clean, cable-free desk setup via Bluetooth Low Energy (BLE).
-* **󱊄 USB-Priority Intelligence:** Automatically switches to USB mode when plugged in, or use **User11** to stay on BLE while charging.
-* **🦀 Powered by RMK:** Built with the safety and speed of the Rust programming language.
+* **󱊄 USB-Priority Intelligence**
+* **🦀 Powered by RMK**
 
 ---
 
-## 📥 Getting Started (No Coding Required!)
+## Getting Started (No Coding Required!)
 
 Forget about installing compilers or setting up Rust environments. Everything is ready for immediate action.
 
@@ -39,16 +39,12 @@ The Kneackebrot is **Vial-ready**.
 
 ---
 
-##  Important Notes for nRF52840
-
-* **󰂯 Bluetooth Stack:** RMK (v0.7+) uses its own Bluetooth stack. If you ever want to switch to ZMK, you will need to [re-flash your bootloader](https://nicekeyboards.com/docs/nice-nano/troubleshooting#my-nicenano-seems-to-be-acting-up-and-i-want-to-re-flash-the-bootloader).
-* **󰚥 Connection Priority:** If a cable is plugged in, it defaults to USB. To switch to wireless while the cable is in, use your assigned **Switch Output** key.
-
----
-
 ## ❤️ Credits
 
-Huge shoutout to the **[RMK Project](https://github.com/HaoboGu/rmk)**. This keyboard wouldn't be nearly as "crispy" without their incredible work on providing a feature-rich and easy-to-use Rust firmware.
+Huge shoutout to the **[RMK Project](https://github.com/HaoboGu/rmk)**.
 
 ---
-*Stay crispy. Keep typing.*if a USB cable is connected. After flashing, remember to disconnect the USB cable, or [switch to BLE-priority mode](https://rmk.rs/docs/features/wireless.html#multiple-profile-support) by pressing User11(Switch Output) key.
+
+[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+
+
