@@ -1,0 +1,71 @@
+[keyboard]
+name = "Knaeckebrot"
+product_name = "Knaeckebrot"
+vendor_id = 0x4c4b
+product_id = 0x4643
+manufacturer = "RMK"
+chip = "nrf52840"
+
+[layout]
+rows = 10
+cols = 7
+layers = 2
+keymap = [
+    [
+        
+        ["Esc", "1", "2", "3", "4", "5", "6"],      
+        ["Tab", "Q", "W", "E", "R", "T", "G"],          
+        ["LShift", "A", "S", "D", "F", "G", "H"],        
+        ["LCtrl", "Z", "X", "C", "V", "B", "_"],         
+        ["_", "_", "_", "_", "LGui", "LAlt", "Space"],   
+
+        
+        ["7", "8", "9", "0", "Minus", "Equal", "Grave"], 
+        ["Y", "U", "I", "O", "P", "LeftBracket", "RightBracket"], 
+        ["H", "J", "K", "L", "Semicolon", "Quote", "Backslash"], 
+        ["_", "N", "M", "Comma", "Dot", "Slash", "RShift"], 
+        ["Enter", "Backspace", "nonus_hash", "_", "_", "_", "_"] 
+    ],
+    [
+        
+        ["_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_"],
+        ["_", "_", "_", "_", "_", "_", "_"]
+    ]
+]
+
+[ble]
+enabled = true
+
+[split]
+connection = "ble"
+
+[split.central]
+rows = 5
+cols = 7
+row_offset = 0
+col_offset = 0
+
+[split.central.matrix]
+row_pins = ["P0_31", "P0_29", "P0_02", "P1_15", "P1_13"]
+col_pins = ["P1_00", "P0_11", "P1_04", "P1_06", "P0_09", "P0_10", "P1_11"]
+
+[[split.peripheral]]
+rows = 5
+cols = 7
+row_offset = 5
+col_offset = 0
+
+[split.peripheral.matrix]
+row_pins = ["P0_17", "P0_20", "P0_22", "P0_24", "P1_00"]
+col_pins = ["P0_11", "P1_04", "P1_06", "P0_09", "P0_10", "P1_11", "P1_13"]
+
+[rmk]
+split_peripherals_num = 1
