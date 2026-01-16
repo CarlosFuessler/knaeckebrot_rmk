@@ -66,6 +66,9 @@ col_offset = 0
 [split.peripheral.matrix]
 row_pins = ["P0_17", "P0_20", "P0_22", "P0_24", "P1_00"]
 col_pins = ["P0_11", "P1_04", "P1_06", "P0_09", "P0_10", "P1_11", "P1_13"]
-
+[battery]
+enabled = true
+pin = "P0_28"
+charging_pin = "P0_30"
 [rmk]
 split_peripherals_num = 1

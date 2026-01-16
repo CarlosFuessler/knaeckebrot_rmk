@@ -23,7 +23,7 @@ args = [
     "--",
     "-O",
     "ihex",
-    "test-central.hex",
+    "central.hex",
 ]
 dependencies = ["build"]
 
@@ -41,7 +41,7 @@ args = [
     "--",
     "-O",
     "ihex",
-    "test-peripheral.hex",
+    "peripheral.hex",
 ]
 dependencies = ["build"]
 
@@ -54,9 +54,9 @@ command = "cargo"
 args = [
     "hex-to-uf2",
     "--input-path",
-    "test-central.hex",
+    "central.hex",
     "--output-path",
-    "test-central.uf2",
+    "central.uf2",
     "--family",
     "nrf52840",
 ]
@@ -71,9 +71,9 @@ command = "cargo"
 args = [
     "hex-to-uf2",
     "--input-path",
-    "test-peripheral.hex",
+    "peripheral.hex",
     "--output-path",
-    "test-peripheral.uf2",
+    "peripheral.uf2",
     "--family",
     "nrf52840",
 ]
@@ -81,3 +81,5 @@ dependencies = ["objcopy-peripheral"]
 
 [tasks.uf2]
 dependencies = ["uf2-central", "uf2-peripheral"]
+command = "echo"
+args = ["UF2 files built successfully!"]
